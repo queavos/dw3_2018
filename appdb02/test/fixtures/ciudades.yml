@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ciudade_nombre: MyString
+  ciudade_cap: false
+  estado: one
+
+two:
+  ciudade_nombre: MyString
+  ciudade_cap: false
+  estado: two

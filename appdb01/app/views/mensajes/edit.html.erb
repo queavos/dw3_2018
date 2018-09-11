@@ -1,0 +1,12 @@
+<h1>Mensajes#edit</h1>
+<p>Find me in app/views/mensajes/edit.html.erb</p>
+
+	<%= form_tag( mensajes_update_path ) do %>
+	<%= hidden_field_tag(:id,@msj.id) %>
+ 	<%= label_tag(:nombre, "Nombre:") %>
+  	<%= text_field_tag(:nombre,@msj.nombre) %><br />
+   	<%= label_tag(:mensaje, "Mensaje:") %>
+  	<%=  text_area_tag(:mensaje,@msj.mensaje) %><br />
+  	<%= link_to 'Volver', :root %>
+    <%= submit_tag("Enviar") %>
+	<% end %>

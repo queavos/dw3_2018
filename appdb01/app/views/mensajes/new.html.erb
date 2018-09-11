@@ -1,0 +1,9 @@
+<h1>Mensajes#new</h1>
+	<%= form_tag( mensajes_create_path ) do %>
+ 	<%= label_tag(:nombre, "Nombre:") %>
+  	<%= text_field_tag(:nombre) %><br />
+   	<%= label_tag(:mensaje, "Mensaje:") %>
+  	<%=  text_area_tag(:mensaje) %><br />
+  	<%= link_to 'Volver', :root %>
+    <%= submit_tag("Enviar") %>
+	<% end %>

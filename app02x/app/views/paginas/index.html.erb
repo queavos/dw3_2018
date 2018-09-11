@@ -1,0 +1,11 @@
+<h1>Paginas#index <%= @variable  %></h1>
+<p>Find me in app/views/paginas/index.html.erb</p>
+
+<%= @lista2.count() %>
+<ul>	
+	<% @lista2.each do |item| %>
+	<li><%= item['apellido']+", "+item['nombre'] %></li>
+	<% end %>
+</ul>
+
+<%= options_for_select(@lista) %>

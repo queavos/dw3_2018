@@ -1,0 +1,13 @@
+<h1>Mensajes#index</h1>
+
+<table>	
+	<thead><tr><th>ID</th><th>NOMBRE</th><th>MENSAJE</th>
+	<th><%= link_to 'Nuevo', mensajes_new_path %> </th>	
+	</tr></thead>
+	<tbody>
+	<% @msjs.each do |msj| %>
+	<tr><td><%= msj['id'] %></td><td><%= msj['nombre'] %></td><td><%= msj['mensaje'] %></td>
+	<td><%= link_to 'Editar', mensajes_edit_path(msj['id']) %> </td><td><%= link_to 'Borrar', mensajes_borrar_path(msj['id']) %></td></tr>
+	<% end %>
+	</tbody>
+</table>
