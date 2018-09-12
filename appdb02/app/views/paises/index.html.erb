@@ -1,2 +1,17 @@
 <h1>Paises#index</h1>
-<p>Find me in app/views/paises/index.html.erb</p>
+<%= @params %>
+<table class="table ">
+	  <thead class="thead-dark">
+	<tr><TH>Pais</TH><TH>Codigo</TH><TH colspan="2">
+		<%= link_to 'Nuevo', paises_new_path %></TH></tr>
+</thead>
+	<tbody>
+	<% @paises.each do |p| %>
+	
+	<tr><TD><%= p.pais_nombre %></TD>
+		<TD><%= p.pais_code %></TD>
+		<TD><%= link_to 'Editar', paises_edit_path(p['id']) %></TD><TD>Borrar</TD>
+	</tr>
+    <% end %>
+    </tbody>
+</table>

@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   get 'paises/index'
   get 'paises/new'
-  get 'paises/create'
-  get 'paises/edit'
-  get 'paises/update'
+  post 'paises/create'
+  get 'paises/edit/:id', to: 'paises#edit', as: 'paises_edit'
+  patch 'paises/edit/:id', to: 'paises#update', as: 'paises_update'
   get 'paises/destroy'
 
   root 'paises#index'
