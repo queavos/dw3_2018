@@ -9,9 +9,10 @@ Rails.application.routes.draw do
   get 'paises/new'
   post 'paises/create'
   get 'paises/:id/edit', to: 'paises#edit', as: 'paises_edit'
-  patch 'paises/edit/:id', to: 'paises#update', as: 'paises_update'
+  patch 'paises/:id/edit', to: 'paises#update', as: 'paises_update'
   get 'paises/borrar/:id', to: 'paises#destroy', as: 'paises_borrar'
 
+  get 'estados/crear'
   root 'paises#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

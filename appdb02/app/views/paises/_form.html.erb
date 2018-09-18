@@ -1,3 +1,11 @@
+<ul>
+<% 
+@paise.errors.full_messages.each do |m|
+
+%>
+<li> <%= m %></li> 
+<% end %>
+</ul>
 <p>
 <%= p.label :pais_nombre %> </br>
 <%= p.text_field :pais_nombre %>

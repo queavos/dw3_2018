@@ -1,3 +1,12 @@
+<ul>
+<% 
+@estado.errors.full_messages.each do |m|
+
+%>
+<li> <%= m %></li> 
+<% end %>
+</ul>
+
 <p>
 <%= p.label :paise_id %> </br>
 <%= p.collection_select(:paise_id, Paise.all, :id, :pais_nombre)  %>

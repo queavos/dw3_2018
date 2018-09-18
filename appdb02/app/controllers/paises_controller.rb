@@ -10,11 +10,20 @@ class PaisesController < ApplicationController
   end
 
   def create
-    paise=Paise.new
-    paise.pais_nombre=params[:paise][:pais_nombre]
-    paise.pais_code=params[:paise][:pais_code]
-    paise.save
-    redirect_to paises_index_path
+    @paise=Paise.new
+    @paise.pais_nombre=params[:paise][:pais_nombre]
+    @paise.pais_code=params[:paise][:pais_code]
+    
+    if @paise.save 
+
+     redirect_to paises_index_path
+     else
+      
+      render "new"
+    end  
+         
+    
+    
   end
 
   def edit
@@ -26,11 +35,14 @@ class PaisesController < ApplicationController
 
   def update
     @id=params[:paise][:id]
-    paise=Paise.find(@id)
-    paise.pais_nombre=params[:paise][:pais_nombre]
-    paise.pais_code=params[:paise][:pais_code]
-    paise.save
-    redirect_to paises_index_path    
+    @paise=Paise.find(@id)
+    @paise.pais_nombre=params[:paise][:pais_nombre]
+    @paise.pais_code=params[:paise][:pais_code]
+    if @paise.save
+      redirect_to paises_index_path
+    else
+      render "edit"
+    end        
   end
 
   def destroy
