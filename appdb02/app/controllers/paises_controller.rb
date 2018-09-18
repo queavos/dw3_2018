@@ -34,5 +34,9 @@ class PaisesController < ApplicationController
   end
 
   def destroy
+    @id=params[:id]
+    paise=Paise.find(@id)
+    paise.destroy
+    redirect_to paises_index_path  
   end
 end

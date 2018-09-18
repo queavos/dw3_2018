@@ -1,0 +1,11 @@
+<p>
+<%= p.label :paise_id %> </br>
+<%= p.collection_select(:paise_id, Paise.all, :id, :pais_nombre)  %>
+</p>
+<p>
+<%= p.label :est_nombre %> </br>
+<%= p.text_field :est_nombre %>
+</p>
+<p>
+<%= p.submit "Enviar" %>
+</p>

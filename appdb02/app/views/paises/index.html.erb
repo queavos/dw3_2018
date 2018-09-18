@@ -10,7 +10,9 @@
 	
 	<tr><TD><%= p.pais_nombre %></TD>
 		<TD><%= p.pais_code %></TD>
-		<TD><%= link_to 'Editar', paises_edit_path(p['id']) %></TD><TD>Borrar</TD>
+		<TD><%= link_to 'Editar', paises_edit_path(p['id']) %></TD><TD>
+<%= link_to 'Borrar', paises_borrar_path(p['id']) %>
+		</TD>
 	</tr>
     <% end %>
     </tbody>

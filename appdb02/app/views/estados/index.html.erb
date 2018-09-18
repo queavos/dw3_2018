@@ -1,0 +1,18 @@
+<h1>Estados#index</h1>
+<table class="table ">
+	  <thead class="thead-dark">
+	<tr><TH>Estado</TH><TH>Pais</TH><TH colspan="2">
+		<%= link_to 'Nuevo', estados_new_path %></TH></tr>
+</thead>
+	<tbody>
+	<% @estados.each do |f| %>
+	
+	<tr><TD><%= f.est_nombre %></TD>
+		<TD><%= f.paise.pais_nombre %></TD>
+		<TD><%= link_to 'Editar', estados_edit_path(f['id']) %></TD><TD>
+<%= link_to 'Borrar', estados_borrar_path(f['id']) %>
+		</TD>
+	</tr>
+    <% end %>
+    </tbody>
+</table>
