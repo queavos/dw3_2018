@@ -17,22 +17,33 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
-//= require colorpicker
+//= require jquery.minicolors
 function perimetral()
 {
-  if ($('#perim').is(':checked')) { tex=1; alert('uno'); } else { tex= 0;  alert('cero'); }
+  //if ($('#perim').is(':checked')) { tex=1; alert('uno'); } else { tex= 0;  alert('cero'); }
   //alert ('perimetral= '+tex);
 }
 function internas()
 {
-  alert ('inter='+$('#inter').val());
+  //alert ('inter='+$('#inter').val());
 }
 function parques()
 {
-  alert ('park='+$('#park').val());
+  //alert ('park='+$('#park').val());
 }
 
 function showcolor()
 {
-  alert ('color='+$('#color').val());
+  //alert ('color='+$('#color').val());
 }
+
+$(function() {
+  $.minicolors.defaults = $.extend($.minicolors.defaults, {
+ changeDelay: 200,
+ letterCase: 'uppercase',
+ theme: 'bootstrap',
+ inline: true,
+ show: true
+});
+    $('#color').minicolors();
+});
