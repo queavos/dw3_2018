@@ -1,6 +1,7 @@
 class EstadosController < ApplicationController
   def index
     @estados= Estado.all()
+   # @estados= Estado.where("paise_id=?", 2)
   end
 
   def new

@@ -1,8 +1,11 @@
 class PaisesController < ApplicationController
   def index
 
-    @paises= Paise.all();
-
+    #@paises= Paise.all(); #trae  todo
+    #@paises= Paise.find([2,10]) #trae  2 y 10
+    @paises= Paise.where(" pais_nombre = ? or pais_code = ?", "Brasil", "BO")  
+    #@paises1= Paise.first # trae el primero
+    @paises1= Paise.find(2) # trae el primero id =2
   end
 
   def new

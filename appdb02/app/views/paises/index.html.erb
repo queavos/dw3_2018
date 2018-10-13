@@ -6,7 +6,10 @@
 		<%= link_to 'Nuevo', paises_new_path %></TH></tr>
 </thead>
 	<tbody>
-	<% @paises.each do |p| %>
+	<%= @paises1.pais_nombre %>
+	<% 
+
+	@paises.each do |p| %>
 	
 	<tr><TD><%= p.pais_nombre %></TD>
 		<TD><%= p.pais_code %></TD>
