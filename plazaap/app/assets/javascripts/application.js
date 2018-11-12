@@ -34,7 +34,7 @@ function parques()
 
 function showcolor()
 {
-  //alert ('color='+$('#color').val());
+  alert ('color='+$('#color').val());
 }
 
 $(function() {

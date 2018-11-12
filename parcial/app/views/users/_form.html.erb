@@ -1,0 +1,47 @@
+_form.html.erb
+<ul>
+<% 
+@user.errors.full_messages.each do |m|
+
+%>
+<li> <%= m %></li> 
+<% end %>
+</ul>
+
+<p>
+<p>
+<%= p.label :nombres %> </br>
+<%= p.text_field :nombres %>
+</p>
+<p>
+<%= p.label :apellidos %> </br>
+<%= p.text_field :apellidos %>
+</p>
+<p>
+<%= p.label  :fenac %> </br>
+<%= p.date_field :fenac %>
+</p>
+<p>
+<%= p.label :email %> </br>
+<%= p.email_field :email %>
+</p>
+<p>
+<%= p.label :username %> </br>
+<%= p.text_field :username %>
+</p>
+<p>
+<%= p.label :password %> </br>
+<%= p.text_field :password %>
+</p>
+<%= p.label :paise_id %> </br>
+<%= p.select(:rol) do %>
+<%= [['Admin', 'Admin'], ['Usuario','Usuario']].each do |x|  %>
+<%= content_tag(:option, x.first, value: x.last) %>
+<% end end%>
+<p>
+<%= p.label :recibemails %> </br>
+<%= p.check_box :recibemails %>
+</p>
+<p>
+<%= p.submit "Enviar" %>
+</p>
